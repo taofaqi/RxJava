@@ -22,7 +22,7 @@ import com.nanchen.rxjava2examples.util.ScreenUtil;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class HomeActivity extends BaseActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.home_toolbar)
     Toolbar mToolbar;
