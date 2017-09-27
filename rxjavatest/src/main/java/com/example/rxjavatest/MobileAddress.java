@@ -1,32 +1,40 @@
 package com.example.rxjavatest;
 
+import java.util.List;
+
 /**
  * Created by taofq on 2017/9/27.
  */
 
 public class MobileAddress {
 
-    /**
-     * error_code : 10005
-     * reason : 应用未审核超时，请提交认证
-     */
 
-    private int error_code;
-    private String reason;
+    public int followersCount;
+    public String href;
+    public boolean acceptSubmission;
+    public boolean firstTime;
+    public boolean canManage;
+    public String description;
+    public String reason;
+    public int banUntil;
+    public String slug;
+    public String name;
+    public int postsCount;
 
-    public int getError_code() {
-        return error_code;
-    }
-
-    public void setError_code(int error_code) {
-        this.error_code = error_code;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public void setReason(String reason) {
-        this.reason = reason;
+    @Override
+    public String toString() {
+        return "MobileAddress{" +
+                "followersCount=" + followersCount +
+                ", href='" + href + '\'' +
+                ", acceptSubmission=" + acceptSubmission +
+                ", firstTime=" + firstTime +
+                ", canManage=" + canManage +
+                ", description='" + description + '\'' +
+                ", reason='" + reason + '\'' +
+                ", banUntil=" + banUntil +
+                ", slug='" + slug + '\'' +
+                ", name='" + name + '\'' +
+                ", postsCount=" + postsCount +
+                '}';
     }
 }

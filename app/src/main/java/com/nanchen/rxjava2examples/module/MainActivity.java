@@ -37,7 +37,6 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.fab)
     FloatingActionButton mFab;
 
-
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_home;
@@ -50,17 +49,17 @@ public class MainActivity extends BaseActivity {
             // 设置 Toolbar 高度为 80dp，适配状态栏
             ViewGroup.LayoutParams layoutParams = mToolbarTitle.getLayoutParams();
 //            layoutParams.height = ScreenUtil.dip2px(this,ScreenUtil.getStatusBarHeight(this));
-            layoutParams.height = ScreenUtil.dip2px(this,80);
+            layoutParams.height = ScreenUtil.dip2px(this, 80);
             mToolbarTitle.setLayoutParams(layoutParams);
         }
 
         initToolBar(mToolbar, false, "");
-        String []titles = {
+        String[] titles = {
                 GlobalConfig.CATEGORY_NAME_OPERATORS,
                 GlobalConfig.CATEGORY_NAME_EXAMPLES
         };
 
-        BaseViewPagerAdapter pagerAdapter = new BaseViewPagerAdapter(getSupportFragmentManager(),titles);
+        BaseViewPagerAdapter pagerAdapter = new BaseViewPagerAdapter(getSupportFragmentManager(), titles);
         pagerAdapter.addFragment(new OperatorsFragment());
         pagerAdapter.addFragment(new UseCasesFragment());
 
@@ -68,7 +67,9 @@ public class MainActivity extends BaseActivity {
         mTabLayout.setupWithViewPager(mViewPager);
     }
 
-    /** 初始化 Toolbar */
+    /**
+     * 初始化 Toolbar
+     */
     public void initToolBar(Toolbar toolbar, boolean homeAsUpEnabled, String title) {
         toolbar.setTitle(title);
         setSupportActionBar(toolbar);
@@ -78,7 +79,7 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.fab)
     public void onViewClicked() {
-        WebViewActivity.start(this,"https://github.com/nanchen2251","我的GitHub,欢迎Star");
+        WebViewActivity.start(this, "https://github.com/nanchen2251", "我的GitHub,欢迎Star");
     }
 
     @Override
